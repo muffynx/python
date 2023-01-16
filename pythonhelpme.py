@@ -4,12 +4,13 @@ import random
 print('''
          1.Cook 10 times
          2.Sail 10 times
-         3.Shadow spirit
-         4.Harb
-         5.Impel Down
-         6.PlayGROUNDS
-         7.GEM and JEWEL
-         8.All blue
+         3.Festival
+         4.Shadow spirit
+         5.Harb
+         6.Impel Down
+         7.PlayGROUNDS
+         8.GEM and JEWEL
+         9.All blue
          ''')
 
 def cook():
@@ -18,7 +19,7 @@ def cook():
     time.sleep(1)
     pg.click(x=392, y=438)
     for i in range(11):
-        time.sleep(1)
+        time.sleep(0.5)
         pg.click(x=615, y=492)
     time.sleep(1)
     pg.click(x=809, y=246)
@@ -51,8 +52,83 @@ def fastival():
         time.sleep(0.8)
         pg.click(x=586, y=534)
         time.sleep(0.5)
-       
-function = {1: cook, 2: sail,3:fastival}
+def Shadowspirit():
+    time.sleep(0.5)
+    pg.click(x=784, y=58)
+    time.sleep(0.2)
+    pg.click(x=676, y=677)
+    time.sleep(1)
+    x = int(input("what times do you want spirt: "))
+    for i in range(x):
+        pg.click(x=1259, y=555)
+        time.sleep(0.5)
+    time.sleep(0.5)
+    pg.click(x=1315, y=62)
+def Harb():
+    time.sleep(0.5)
+    pg.click(x=1235, y=115)
+    time.sleep(0.5)
+    pg.click(x=683, y=525)
+    time.sleep(0.5)
+    pg.click(x=1041, y=265)
+    time.sleep(0.5)
+    pg.click(x=621, y=509)
+    time.sleep(0.5)
+    pg.click(x=624, y=402)
+    time.sleep(0.5)
+    pg.click(x=1017, y=663)
+    time.sleep(0.5)
+    pg.click(x=668, y=442)
+    time.sleep(0.5)
+    pg.click(x=668, y=442)
+    time.sleep(0.5)
+    pg.click(x=1252, y=44)
+    time.sleep(0.5)
+    pg.click(x=1288, y=82)
+    time.sleep(1)
+def ImpelDown():
+    pg.click(x=644, y=52)
+    time.sleep(2)
+    for i in range(2):
+        pg.click(x=595, y=671)
+    time.sleep(0.2)
+    pg.click(x=1310, y=56)
+    time.sleep(0.3)
+def PlayGROUNDS():
+    pg.click(x=569, y=57)
+    time.sleep(1)
+    pg.click(x=363, y=486)
+    time.sleep(0.2)
+    pg.click(x=747, y=603)
+    time.sleep(0.1)
+    pg.click(x=1026, y=135)
+def GEMandJEWEL():
+    pg.click(x=938, y=664)
+    time.sleep(1.5)
+    pg.click(x=739, y=427)
+    time.sleep(1)
+    pg.click(x=607, y=450)
+    time.sleep(5)
+    pg.click(x=1006, y=52)
+    time.sleep(0.1)
+    pg.click(x=888, y=565)
+    time.sleep(0.1)
+    pg.click(x=607, y=426)
+    time.sleep(1)
+    pg.click(x=954, y=82)
+    time.sleep(0.1)
+    pg.click(x=1324, y=58)
+    time.sleep(0.1)
+def Allblue():
+    pg.click(x=715, y=66)
+    time.sleep(1)
+    pg.click(x=417, y=247)
+    for i in range(5):
+        pg.click(x=341, y=229)
+    time.sleep(1.5)
+    pg.click(x=1326, y=63)
+function = {1: cook, 2: sail,3:fastival,4:Shadowspirit,5:Harb,6:ImpelDown,7:PlayGROUNDS,
+            8:GEMandJEWEL,9:Allblue}
 while True:
     user_input = input('enter a number 1 and 5 to start my funciton ')
     if user_input.isalpha():
